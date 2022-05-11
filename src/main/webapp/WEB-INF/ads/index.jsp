@@ -9,7 +9,7 @@
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp"/>
 
-    <div class="d-flex " >
+    <div class="d-flex flex-wrap">
         <c:forEach var="ad" items="${ads}">
             <div class="card col-md-6 m-5 p-3" style="width: 20rem;">
                 <div class="card-body">
@@ -31,7 +31,7 @@
                                             <i class="fa-solid fa-champagne-glasses fa-2xl m-4"></i>
                                         </c:when>
                                         <c:otherwise>
-                                            <p>Etc</p>
+                                            <i class="fa-solid fa-circle-exclamation fa-2xl m-4"></i>
                                         </c:otherwise>
                                     </c:choose>
                     <h3 class="card-title">${ad.title}</h3>
