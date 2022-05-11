@@ -14,7 +14,7 @@
 
     <nav class="navbar navbar-light bg-light ">
         <div class="container d-flex justify-content-start">
-            <a class="navbar-brand d-flex flex-column justify-content-center" ><h2>SA Lister</h2></a>
+            <a class="navbar-brand d-flex flex-column justify-content-center" href="../../index.jsp"><h2>SA Lister</h2></a>
             <div class="mt-4 mx-3">
 <%--                        searchbar--%>
                 <form action="/search" method="GET">

@@ -17,7 +17,7 @@
     </div>
 
     <div class="container">
-        <h1>Here Are all your ads!</h1>
+        <h1>Here are all your ads!</h1>
 
     <div class="d-flex flex-wrap justify-content-center" >
         <c:forEach var="ad" items="${ads}">
