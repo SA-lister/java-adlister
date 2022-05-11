@@ -28,7 +28,7 @@
         <c:choose>
         <c:when test="${sessionScope.user != null}">
         <button class="nav-item bg-light border border-0">
-            <a class="nav-link" href="/ads/create">Create Add</a>
+            <a class="nav-link" href="/ads/create">Create Ad</a>
         </button>
         </c:when>
         </c:choose>

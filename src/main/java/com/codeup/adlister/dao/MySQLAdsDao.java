@@ -37,8 +37,6 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
-
-
     @Override
     public List<Ad> filterByUsername(Long id){
         PreparedStatement stmt = null;
@@ -51,7 +49,6 @@ public class MySQLAdsDao implements Ads {
             throw new RuntimeException("Error retrieving all ads.", e);
         }
     }
-
 
     public List<Ad> createAdsFromResults(ResultSet rs) throws SQLException {
         List<Ad> ads = new ArrayList<>();
@@ -150,7 +147,7 @@ public class MySQLAdsDao implements Ads {
 
     @Override
     public void likeAd(String id) {
-        String query = "UPDATE ads set reputation = reputation+1 where id = ?";
+        String query = "UPDATE sa_lister_db.ads set reputation = reputation +1 WHERE id = ?";
         try {
             PreparedStatement stmt = connection.prepareStatement(query);
             stmt.setInt(1, parseInt(id));
@@ -162,7 +159,7 @@ public class MySQLAdsDao implements Ads {
 
     @Override
     public void dislikeAd(String id) {
-        String query = "UPDATE ads set reputation = reputation-1 where id = ?";
+        String query = "UPDATE sa_lister_db.ads set reputation = reputation -1 WHERE id = ?";
         try {
             PreparedStatement stmt = connection.prepareStatement(query);
             stmt.setInt(1, parseInt(id));
@@ -171,7 +168,6 @@ public class MySQLAdsDao implements Ads {
             throw new RuntimeException("Error updating ad!", e);
         }
     }
-
 
     public Ad extractAd(ResultSet rs) throws SQLException {
         return new Ad(
