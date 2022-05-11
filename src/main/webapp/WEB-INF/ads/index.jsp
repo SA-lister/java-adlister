@@ -9,7 +9,7 @@
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp"/>
 
-    <div class="d-flex flex-wrap">
+    <div class="d-flex flex-wrap justify-content-center">
         <c:forEach var="ad" items="${ads}">
             <div class="card col-md-6 m-5 p-3" style="width: 20rem;">
                 <div class="card-body">
