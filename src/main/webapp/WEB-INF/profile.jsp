@@ -19,7 +19,7 @@
     <div class="container">
         <h1>Here Are all your ads!</h1>
 
-    <div class="d-flex" >
+    <div class="d-flex flex-wrap justify-content-center" >
         <c:forEach var="ad" items="${ads}">
 
             <div class="card col-md-6 m-5 p-3" style="width: 20rem;">
@@ -42,7 +42,7 @@
                                 <i class="fa-solid fa-champagne-glasses fa-2xl m-4"></i>
                             </c:when>
                             <c:otherwise>
-                                <i class="fa-solid fa-circle-exclamation fa-2xl mx-4"></i>
+                                <i class="fa-solid fa-circle-exclamation fa-2xl m-4"></i>
                             </c:otherwise>
                         </c:choose>
 
@@ -126,11 +126,11 @@
                         <input type="hidden" value="${ad.id}" name="update">
                         <input type="submit">
                     </form>
+                    <form action="/delete" method="POST">
+                        <input type="hidden" value="${ad.id}" name="delete">
+                        <input type="submit" value="Delete">
+                    </form>
                 </div>
-                <form action="/delete" method="POST">
-                    <input type="hidden" value="${ad.id}" name="delete">
-                    <input type="submit" value="Delete">
-                </form>
             </div>
         </c:forEach>
     </div>
