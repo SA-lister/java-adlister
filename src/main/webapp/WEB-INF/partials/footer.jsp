@@ -67,7 +67,7 @@
                     </p>
                     <p>
                         <i class="fa-solid fa-utensils"></i>
-                        <a href="https://www.yelp.com/search?find_loc=San+Antonio%2C+TX" class="text-reset">Food Stops</a>
+                        <a href="https://www.yelp.com/search?find_loc=San+Antonio%2C+TX" class="text-reset">Yelp Reviews</a>
                     </p>
                     <p>
                         <i class="fa-solid fa-bed"></i>
