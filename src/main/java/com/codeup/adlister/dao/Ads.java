@@ -23,5 +23,6 @@ public interface Ads {
     List<Ad> findByKeyword(String query);
 
     void likeAd(String id);
+    void dislikeAd(String id);
 
 }

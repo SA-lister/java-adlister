@@ -148,17 +148,6 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
-
-
-
-
-
-
-
-
-
-
-
     @Override
     public void likeAd(String id) {
         String query = "UPDATE ads set reputation = reputation+1 where id = ?";
@@ -171,15 +160,17 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
-
-
-
-
-
-
-
-
-
+    @Override
+    public void dislikeAd(String id) {
+        String query = "UPDATE ads set reputation = reputation-1 where id = ?";
+        try {
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setInt(1, parseInt(id));
+            stmt.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException("Error updating ad!", e);
+        }
+    }
 
 
     public Ad extractAd(ResultSet rs) throws SQLException {
