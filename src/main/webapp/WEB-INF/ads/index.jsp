@@ -27,6 +27,9 @@
                                         <c:when test="${ad.catId == 4}">
                                             <i class="fa-solid fa-people-line fa-2xl m-4"></i>
                                         </c:when>
+                                        <c:when test="${ad.catId == 5}">
+                                            <i class="fa-solid fa-champagne-glasses fa-2xl m-4"></i>
+                                        </c:when>
                                         <c:otherwise>
                                             <p>Etc</p>
                                         </c:otherwise>

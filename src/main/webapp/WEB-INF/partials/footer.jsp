@@ -27,6 +27,10 @@
                 <p class="mt-3 mx-3">Family</p>
             </div>
             <div class="m-0 mt-4">
+                <a class="fa-solid fa-champagne-glasses fa-2xl mx-4" href="/category?nightlife"></a>
+                <p class="mt-3 mx-4">Nightlife</p>
+            </div>
+            <div class="m-0 mt-4">
                 <a class="fa-solid fa-circle-exclamation fa-2xl mx-4" href="/category?etc"></a>
                 <p class="mt-3 mx-4">Etc.</p>
             </div>
