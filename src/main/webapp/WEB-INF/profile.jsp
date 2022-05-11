@@ -35,6 +35,9 @@
                             <c:when test="${ad.catId == 4}">
                                 <i class="fa-solid fa-people-line fa-2xl m-4"></i>
                             </c:when>
+                            <c:when test="${ad.catId == 5}">
+                                <i class="fa-solid fa-champagne-glasses fa-2xl m-4"></i>
+                            </c:when>
                             <c:otherwise>
                                 <p>Etc</p>
                             </c:otherwise>
@@ -47,30 +50,75 @@
                     <hr>
                     <h6 class="card-subtitle mb-2 text-muted">${ad.location}</h6>
 
+                    <br>
                     <form action="/update" method="POST">
                         <div class="form-group">
                             <label for="category">Edit Category</label>
                             <select name="category" id="category">
-                                <option value=1>Restaurants</option>
-                                <option value=2>History</option>
-                                <option value=3>Outdoors</option>
-                                <option value=4>Family</option>
-                                <option value=5>Etc.</option>
+                                <c:choose>
+                                    <c:when test="${ad.catId == 1}">
+                                        <option value=1 selected>Restaurants</option>
+                                    </c:when>
+                                    <c:otherwise>
+                                        <option value=1 >Restaurants</option>
+                                    </c:otherwise>
+                                </c:choose>
+                                <c:choose>
+                                    <c:when test="${ad.catId == 2}">
+                                        <option value=2 selected>History</option>
+                                    </c:when>
+                                    <c:otherwise>
+                                        <option value=2 >History</option>
+                                    </c:otherwise>
+                                </c:choose>
+                                <c:choose>
+                                    <c:when test="${ad.catId == 3}">
+                                        <option value=3 selected>Outdoors</option>
+                                    </c:when>
+                                    <c:otherwise>
+                                        <option value=3>Outdoors</option>
+                                    </c:otherwise>
+                                </c:choose>
+                                <c:choose>
+                                    <c:when test="${ad.catId == 4}">
+                                        <option value=4 selected>Family</option>
+                                    </c:when>
+                                    <c:otherwise>
+                                        <option value=4>Family</option>
+                                    </c:otherwise>
+                                </c:choose>
+                                <c:choose>
+                                    <c:when test="${ad.catId == 5}">
+                                        <option value=5 selected>Nightlife</option>
+                                    </c:when>
+                                    <c:otherwise>
+                                        <option value=5>Nightlife</option>
+                                    </c:otherwise>
+                                </c:choose>
+                                <c:choose>
+                                    <c:when test="${ad.catId == 6}">
+                                        <option value=6 selected>Etc.</option>
+                                    </c:when>
+                                    <c:otherwise>
+                                        <option value=6>Etc.</option>
+                                    </c:otherwise>
+                                </c:choose>
                             </select>
                         </div>
                         <div class="form-group">
                             <label for="title">Edit Title</label>
-                            <input type="text" id="title" name="title">
+                            <input type="text" id="title" name="title" value="${ad.title}">
                         </div>
                             <%--                    <br>--%>
                         <div class="form-group">
                             <label for="location">Edit Location</label>
-                            <input type="text" id="location" name="location">
+                            <input type="text" id="location" name="location" value="${ad.location}">
                         </div>
                             <%--                    <br>--%>
                         <div class="form-group">
                             <label for="description">Edit Description</label>
-                            <input type="" id="description" name="description">
+<%--                            <input type="" id="description" name="description">--%>
+                            <textarea name="description" id="description" cols="20" rows="8">${ad.description}</textarea>
                         </div>
                         <input type="hidden" value="${ad.id}" name="update">
                         <input type="submit">
@@ -83,7 +131,6 @@
             <input class="" type="submit" value="Edit Account">
         </a>
 
-        <jsp:include page="/WEB-INF/partials/footer.jsp" />
-
+    <jsp:include page="/WEB-INF/partials/footer.jsp" />
 </body>
 </html>
