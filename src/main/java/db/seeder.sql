@@ -10,6 +10,7 @@ VALUES ('restaurant'),
        ('history'),
        ('outdoors'),
        ('family'),
+       ('nightlife'),
        ('etc');
 
 INSERT INTO ads (user_id, cat_id, title, description, location, reputation)
@@ -21,5 +22,6 @@ VALUES ('1', '1', 'Bunz', 'Local burger restaraunt with some of the best burgers
        ('3', '2', 'The Alamo', 'The Alamo Mission, commonly called the Alamo and originally known as the Misión San Antonio de Valero, is a historic Spanish mission and fortress compound founded in the 18th century by Roman Catholic missionaries in what is now San Antonio, Texas', '300 Alamo Plaza, San Antonio, TX 78205', 0),
        ('3', '3', 'Japanese Tea Garden', 'The Japanese Tea Garden is a beautiful, relaxing space and a free attraction in San Antonio. A former rock quarry, this area has been transformed into a peaceful garden with exotic plants, ponds with Koi, waterfalls, and the lovely stone Pavilion.', '200-414 Alpine, San Antonio, Texas', 0),
        ('3', '4', 'Six Flags Fiesta Texas', 'Six Flags Fiesta Texas, a popular attraction designed with kids in mind, is a theme and water park set in a former rock quarry. You can find traditional roller coasters, more advanced thrill rides, as well as those designed for younger kids and families.', '17000 W I-10, San Antonio, TX 78257', 0),
-       ('3', '4', 'Natural Bridge Wildlife Ranch', 'an "African Safari, Texas-Style." The ranch is a Texas Land Heritage Property, recognized and certified by the State of Texas for being used for agriculture by the same family for over 100 years.', '26515 Natural Bridge Caverns Rd, San Antonio, TX 78266', 0);
+       ('3', '4', 'Natural Bridge Wildlife Ranch', 'an "African Safari, Texas-Style." The ranch is a Texas Land Heritage Property, recognized and certified by the State of Texas for being used for agriculture by the same family for over 100 years.', '26515 Natural Bridge Caverns Rd, San Antonio, TX 78266', 0),
+       ('3', '5', 'Howl at the Moon', 'Lively bar with a party vibe featuring dueling piano shows & novelty bucket drinks.', '111 W. Crockett Street St. #201, San Antonio, TX 78205', 0);
 
