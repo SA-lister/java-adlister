@@ -12,7 +12,7 @@
         <div class="d-flex justify-content-center">
             <div class="m-0 mt-4">
                 <a class="fa-solid fa-burger fa-2xl mx-4" href="/category?restaurant" ></a>
-                <p class="mt-3 mx-3">Restaurants</p>
+                <p class="mt-3 mx-1">Restaurants</p>
             </div>
             <div class="m-0 mt-4">
                 <a class="fa-solid fa-landmark fa-2xl mx-4" href="/category?history"></a>
@@ -20,7 +20,7 @@
             </div>
             <div class="m-0 mt-4">
                 <a class="fa-solid fa-person-hiking fa-2xl mx-4" href="/category?outdoors"></a>
-                <p class="mt-3 mx-3">Outdoors</p>
+                <p class="mt-3 mx-2">Outdoors</p>
             </div>
             <div class="m-0 mt-4">
                 <a class="fa-solid fa-people-line fa-2xl mx-4" href="/category?family"></a>
@@ -28,7 +28,7 @@
             </div>
             <div class="m-0 mt-4">
                 <a class="fa-solid fa-circle-exclamation fa-2xl mx-4" href="/category?etc"></a>
-                <p class="mt-3 mx-3">Etc.</p>
+                <p class="mt-3 mx-4">Etc.</p>
             </div>
         </div>
 
