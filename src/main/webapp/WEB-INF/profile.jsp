@@ -9,8 +9,11 @@
 <body>
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 
-    <div class="container ">
-        <h1>Welcome, ${sessionScope.user.username}!</h1>
+    <div class="container d-flex">
+        <h1 class="mb-5">Welcome, ${sessionScope.user.username}!</h1>
+        <a href="profileupdate">
+            <input class="mt-3 mx-4 bg-transparent border-0" type="submit" value="Edit Account">
+        </a>
     </div>
 
     <div class="container">
@@ -127,9 +130,7 @@
             </div>
         </c:forEach>
     </div>
-        <a href="profileupdate">
-            <input class="" type="submit" value="Edit Account">
-        </a>
+
 
     <jsp:include page="/WEB-INF/partials/footer.jsp" />
 </body>
