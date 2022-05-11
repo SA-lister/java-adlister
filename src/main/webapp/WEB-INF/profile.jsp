@@ -39,7 +39,7 @@
                                 <i class="fa-solid fa-champagne-glasses fa-2xl m-4"></i>
                             </c:when>
                             <c:otherwise>
-                                <p>Etc</p>
+                                <i class="fa-solid fa-circle-exclamation fa-2xl mx-4"></i>
                             </c:otherwise>
                         </c:choose>
 
