@@ -18,8 +18,8 @@
 
     <div class="container">
         <h1>Here Are all your ads!</h1>
-    <div class="d-flex" >
 
+    <div class="d-flex" >
         <c:forEach var="ad" items="${ads}">
 
             <div class="card col-md-6 m-5 p-3" style="width: 20rem;">
@@ -127,6 +127,10 @@
                         <input type="submit">
                     </form>
                 </div>
+                <form action="/delete" method="POST">
+                    <input type="hidden" value="${ad.id}" name="delete">
+                    <input type="submit" value="Delete">
+                </form>
             </div>
         </c:forEach>
     </div>
