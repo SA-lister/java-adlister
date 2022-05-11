@@ -7,7 +7,7 @@
     </jsp:include>
 </head>
 <body>
-<jsp:include page="/WEB-INF/partials/navbar.jsp" />
+<jsp:include page="/WEB-INF/partials/navbar.jsp"/>
 
     <div class="d-flex " >
         <c:forEach var="ad" items="${ads}">
@@ -32,13 +32,14 @@
                                         </c:otherwise>
                                     </c:choose>
                     <h3 class="card-title">${ad.title}</h3>
+                        <div class="d-flex flex-row justify-content-center">
+                            <a class="fa-solid fa-thumbs-up pt-1" href="/like?${ad.id}"></a>
+                            <p class="ps-3">${ad.reputation} Users like this</p>
+                            <a class="fa-solid fa-thumbs-down pt-1 ps-3" href="/dislike?${ad.id}"></a>
+                        </div>
                 </div>
                     <hr>
                     <p class="card-text">${ad.description}</p>
-                    <div class="d-flex flex-row text-center">
-                        <a class="fa-solid fa-thumbs-up pt-1" href="/like?${ad.id}"></a>
-                        <p class="ps-3">${ad.reputation} Users like this</p>
-                    </div>
                     <hr>
                     <h6 class="card-subtitle mb-2 text-muted">${ad.location}</h6>
                 </div>
