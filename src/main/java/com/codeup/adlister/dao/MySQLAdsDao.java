@@ -126,18 +126,15 @@ public class MySQLAdsDao implements Ads {
 
     @Override
     public List<Ad> findByKeyword(String title) {
+        List<Ad> ads = new ArrayList<>();
         String query = "SELECT * FROM sa_lister_db.ads WHERE title LIKE ?";
         try {
             PreparedStatement stmt = connection.prepareStatement(query);
             stmt.setString(1, '%'+title+'%');
             ResultSet rs = stmt.executeQuery();
 
-            Config config = new Config();
-            MySQLAdsDao util = new MySQLAdsDao(config);
-            List<Ad> ads = new ArrayList<>();
-
             while(rs.next()){
-                ads.add(util.extractAd(rs));
+                ads.add(extractAd(rs));
             }
             return ads;
         } catch(SQLException e) {

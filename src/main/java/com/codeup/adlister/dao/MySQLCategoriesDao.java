@@ -38,17 +38,15 @@ public class MySQLCategoriesDao implements Categories{
 
     @Override
     public List<Ad> findByCategory(String category) {
+        List<Ad> ads = new ArrayList<>();
         String query = "SELECT * FROM ads JOIN categories c ON c.id = ads.cat_id WHERE category = ?";
         try {
             PreparedStatement stmt = connection.prepareStatement(query);
             stmt.setString(1, category);
             ResultSet rs = stmt.executeQuery();
 
-            Config config = new Config();
-            MySQLAdsDao util = new MySQLAdsDao(config);
-            List<Ad> ads = new ArrayList<>();
             while(rs.next()){
-                ads.add(util.extractAd(rs));
+                ads.add(extractAd(rs));
             }
 
             return ads;
@@ -72,6 +70,16 @@ public class MySQLCategoriesDao implements Categories{
         return categories;
     }
 
-
+    public Ad extractAd(ResultSet rs) throws SQLException {
+        return new Ad(
+                rs.getLong("id"),
+                rs.getLong("user_id"),
+                rs.getLong("cat_id"),
+                rs.getString("title"),
+                rs.getString("description"),
+                rs.getString("location"),
+                rs.getInt("reputation")
+        );
+    }
 
 }
