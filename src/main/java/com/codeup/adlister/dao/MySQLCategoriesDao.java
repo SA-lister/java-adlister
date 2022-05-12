@@ -72,14 +72,6 @@ public class MySQLCategoriesDao implements Categories{
         return categories;
     }
 
-//    private Ad extractAd(ResultSet rs) throws SQLException {
-//        return new Ad(
-//                rs.getLong("id"),
-//                rs.getLong("user_id"),
-//                rs.getLong("cat_id"),
-//                rs.getString("title"),
-//                rs.getString("description"),
-//                rs.getString("location")
-//        );
-//    }
+
+
 }

@@ -17,7 +17,8 @@
                     <option value=2>History</option>
                     <option value=3>Outdoors</option>
                     <option value=4>Family</option>
-                    <option value=5>Etc.</option>
+                    <option value=5>Nightlife</option>
+                    <option value=6>Etc.</option>
                 </select>
             </div>
             <div class="form-group">
