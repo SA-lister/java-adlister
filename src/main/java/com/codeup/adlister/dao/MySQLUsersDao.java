@@ -87,7 +87,6 @@ public class MySQLUsersDao implements Users {
             } else {
                 return null;
             }
-
         } catch (SQLException e) {
             throw new RuntimeException("Error searching for ads by id", e);
         }

@@ -6,6 +6,8 @@
         <jsp:param name="title" value="Welcome to my site!" />
     </jsp:include>
     <style>
+
+
         img {
             height: 60em!important;
         }
@@ -37,7 +39,7 @@
     </div>
 
     <div class="text-center">
-        <h1 class="m-5">Welcome to SA-lister!</h1>
+        <h1 class="m-5">Browse the best things to do in San Antonio!</h1>
     </div>
 
     <jsp:include page="/WEB-INF/partials/footer.jsp" />
