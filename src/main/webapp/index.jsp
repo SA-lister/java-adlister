@@ -7,7 +7,7 @@
     </jsp:include>
     <style>
         img {
-            height: 60em;
+            height: 60em!important;
         }
     </style>
 </head>

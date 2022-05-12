@@ -5,13 +5,14 @@
     <jsp:include page="/WEB-INF/partials/head.jsp">
         <jsp:param name="title" value="Viewing All The Ads" />
     </jsp:include>
+    <link type="text/css" rel="stylesheet" href="/css/style.css">
 </head>
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp"/>
 
     <div class="d-flex flex-wrap justify-content-center">
         <c:forEach var="ad" items="${ads}">
-            <div class="card col-md-6 m-5 p-3" style="width: 20rem;">
+            <div class="card col-md-6 m-5 p-3" style="width: 25rem;">
                 <div class="card-body">
                     <div class="text-center">
                                     <c:choose>

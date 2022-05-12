@@ -2,6 +2,11 @@
     font-size: 14px;
 }
 
-body {
-    font-size: 28px;
+h1 {
+    font-size: 40px!important;
+}
+
+h2, h3, h4, h5, h6, p, i, a {
+    font-size: 14px!important;
+
 }
